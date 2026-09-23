@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Card</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+ 
+<div class="w-full max-w-sm bg-white rounded-lg shadow p-6">
+
+     <h1 class="text-xl font-semibold text-gray-800 mb-1">Report Card</h1>
+    <p class="text-sm text-gray-500 mb-6">Enter marks out of 100</p>
+    <div id="formSection">
+        <label class="block text-sm font-medium text-gray-700">maths</label>
+        <input type="number" id="maths" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+        <br>
+        <br>
+
+        <label class="block text-sm font-medium text-gray-700">science</label>
+        <input type="number" id="science" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+        <br>
+        <br>
+
+        <label class="block text-sm font-medium text-gray-700">hindi</label>
+        <input type="number" id="hindi" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+        <br>
+        <br>
+
+        <label class="block text-sm font-medium text-gray-700">english</label>
+        <input type="number" id="english" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+        <br>
+        <br>
+
+        <button onclick="submitMarks()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md">submit</button>
+    </div>
+
+    <div id="resultSection" style="display: none;">
+        <table class="w-full text-sm border border-gray-300 border-collapse">
+          <tr class="bg-gray-50">
+            <th class="border border-gray-300 px-3 py-2 text-left">Subjects</th>
+            <th class="border border-gray-300 px-3 py-2 text-left">Marks</th>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2">Maths</td>
+            <td class="border border-gray-300 px-3 py-2" id="mathsTd"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2">science</td>
+            <td class="border border-gray-300 px-3 py-2" id="scienceTd"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2">English</td>
+            <td class="border border-gray-300 px-3 py-2" id="englishTd"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2">Hindi</td>
+            <td class="border border-gray-300 px-3 py-2" id="hindiTd"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2 font-semibold">Total Marks</td>
+            <td class="border border-gray-300 px-3 py-2 font-semibold" id="totalTd"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-3 py-2 font-semibold">Percent</td>
+            <td class="border border-gray-300 px-3 py-2 font-semibold" id="percentTd"></td>
+          </tr>
+        </table>
+
+        <h1 class="declare text-center text-2xl font-bold mt-4"></h1>
+    </div>
+
+</div>
+
+</body>
+</html>
